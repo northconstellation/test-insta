@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset='utf-8'>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instatraff</title>
+    <meta name="author" content="Instatraff">
+    <meta name="keywords" content="Instatraff">
+    <meta property="og:title" content="Instatraff" />
+    <meta property="og:description" content="Весь трафик из Инстаграм только в нашем digital агенстве"/>
+    <meta property="og:url" content="http://instatraff.info/" />
+    <meta property="og:image" content="http://instatraff.info/img/instatraff.jpg" />
+    <meta name="description" content="Весь трафик из Инстаграм только в нашем digital агенстве">
+    <link rel="image_src" href="http://instatraff.info/img/instatraff.jpg" />
+    <meta name="title" content="Instatraff" />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        function AjaxFormRequest(result_id,formMain,url) {
+            jQuery.ajax({
+                url:     url,
+                type:     "POST",
+                dataType: "html",
+                data: jQuery("#"+formMain).serialize(),
+                success: function(response) {
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) {
+                    document.getElementById(result_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>";
+                }
+            });
+
+            $(':input','#formMain')
+                .not(':button, :submit, :reset, :hidden')
+                .val('')
+                .removeAttr('checked')
+                .removeAttr('selected');
+        }
+    </script>
+</head>
+<body>
+
+
+<section class="b-container__home" data-scroll-id="home">
+    <div class="b-home">
+        <div class="b-home__header">
+            <div class="b-header b-wrap">
+                <div class="b-header__logo">
+                    <a href="#" data-scroll-target="home" class="b-logo anchor"><img src="img/logo.svg" class="b-logo__img" alt=""></a>
+                </div>
+                <nav class="header-nav">
+                    <button class="header-nav__btn">
+                        <span class="header-nav__btn-line"></span>
+                    </button>
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item"><a href="#" data-scroll-target="home" class="anchor header-nav__link ">Главная</a></li>
+                        <li class="header-nav__item"><a href="#" data-scroll-target="platforms" class="header-nav__link">Охват в разрезе ГЕО</a></li>
+                        <li class="header-nav__item"><a href="#" data-scroll-target="contacts" class="header-nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="b-home__singleslider">
+            <div class="single-item">
+                <div class="item">
+                    <div  id="slide1">
+                        <div class="b-intro__table">
+                            <div class="b-table__cell">
+                                <div class="b-table__item">
+                                <h1>Мы объединили все доступные Instagram паблики в одном месте</h1>
+                                <div class="b-button">
+                                    <a href="#" data-scroll-target="contacts" class="b-button__header">связаться с нами</a>
+                                </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div  id="slide2">
+                        <div class="b-intro__table">
+                            <div class="b-table__cell">
+                                <div class="b-table__item">
+                                    <h1>Вся Instagram аудитория СНГ собрана только у нас </h1>
+                                    <div class="b-button">
+                                        <a href="#" data-scroll-target="contacts" class="b-button__header">связаться с нами</a>
+                                    </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div  id="slide3">
+                        <div class="b-intro__table">
+                            <div class="b-table__cell">
+                                <div class="b-table__item">
+                                    <h1>До 1 миллиарда просмотров вашей рекламы в месяц</h1>
+                                    <div class="b-button">
+                                        <a href="#" data-scroll-target="contacts" class="b-button__header">связаться с нами</a>
+                                    </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div  id="slide4">
+                        <div class="b-intro__table">
+                            <div class="b-table__cell">
+                                <div class="b-table__item">
+                                    <h1>Гибкая ценовая политика и индивидуальный подход к каждому </h1>
+                                    <div class="b-button">
+                                        <a href="#" data-scroll-target="contacts" class="b-button__header">связаться с нами</a>
+                                    </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="b-container__platforms"  data-scroll-id="platforms">
+    <div class="b-platforms content_middle">
+        <div class="b-platforms__title title-dark">Охват в разрезе ГЕО</div>
+        <div class="b-platforms__platformsRow b-wrap">
+            <div class="b-platformsRow">
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-flags">
+                            <img src="img/1.png" class="b-platformsCell__img" alt="">
+                            <p>Россия</p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-platformsCell__text">30 000 000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-platformsRow">
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-flags">
+                            <img src="img/2.png" class="b-platformsCell__img" alt="">
+                            <p>Украина</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-platformsCell__text">7 000 000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-platformsRow">
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-flags">
+                            <img src="img/3.png" class="b-platformsCell__img" alt="">
+                            <p>Казахстан</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-platformsCell__text">1 000 000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-platformsRow">
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-flags">
+                            <img src="img/4.png" class="b-platformsCell__img" alt="">
+                            <p>Остальные</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="b-platformsRow__platformsCell">
+                    <div class="b-platformsCell">
+                        <div class="b-platformsCell__text">5 000 000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="b-container__contacts"   data-scroll-id="contacts">
+    <div class="b-contacts content_middle">
+        <div class="b-contact__form">
+            <div class="b-form form">
+                <div class="b-form__title title-subblock " id="messegeResult">Свяжитесь с нами</div>
+                <div class="ss-form">
+                    <form method="post" action="" id="formMain" name="formMain">
+                        <div class="ss-form-entry b-form__input b-inputBlock__required">
+                            <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" required/>
+                        </div>
+                        <div class="ss-form-entry b-form__input">
+                            <input id="company" type="text" name="company" placeholder="Название компании" maxlength="30" autocomplete="off" require/>
+                        </div>
+                        <div class="ss-form-entry b-form__input b-inputBlock__required">
+                            <input id="emeil" type="text" name="emeil" placeholder="Введите ваш емейл" maxlength="30" autocomplete="off" required/>
+                        </div>
+                        <div class="b-form__inputBlock">
+                            <div class="b-inputBlock">
+                                <div class="ss-form-entry b-form__input b-inputBlock__small">
+                                    <input id="telephone" type="text" name="telephone" placeholder="Номер телефона" maxlength="30" autocomplete="off" require/>
+                                </div>
+                                <div class="ss-form-entry b-form__input b-inputBlock__small">
+                                    <input id="skype" type="text" name="skype" placeholder="Skype" maxlength="30" autocomplete="off" require/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ss-form-entry b-form__input">
+                            <textarea id="detail" type="text" name="detail" placeholder="Детали..." maxlength="30" autocomplete="off" require></textarea>
+                        </div>
+
+                        <div class="b-ss-form__button">
+                            <input class="b-button" id="button" type="button"  value="Отправить" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
