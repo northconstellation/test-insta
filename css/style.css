@@ -709,7 +709,6 @@ section {
     }
     .b-platformsCell__text {
         font-size: 20px !important;
-        text-align: center;
     }
 
     .b-platformsRow {
@@ -787,5 +786,9 @@ section {
 @media only screen and (max-width: 500px){
     .b-table__item {
         max-width: 300px !important;
+    }
+    .b-platformsRow__platformsCell {
+        width: 43.5%;
+        margin: 0 3%;
     }
 }

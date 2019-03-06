@@ -11,9 +11,9 @@
 if(!empty($_POST['name'] )&& !empty($_POST['emeil']))
 {
     $emeil = $_POST['emeil'];
-    $to = "mail@cybertraff.com";
-    $from = 'mail@cybertraff.com';
-    $subject = "Заяка с сайта cybertraff.com";
+    $to = "irynafrontend@gmail.com";
+    $from = 'mail@instatraff.info';
+    $subject = "Заяка с сайта instatraff.info";
     $message = "Имя: " . $_POST['name'] . '<br/>';
     $message .= "Телефон: " . $_POST['company'] . '<br/>';
     $message .= "E-mail: " . $_POST['emeil'] . '<br/>';
@@ -24,7 +24,7 @@ if(!empty($_POST['name'] )&& !empty($_POST['emeil']))
     mail($toEmail, $subject, $body, $headers);
 
     $headers = "Content-type: text/html; charset=UTF-8 \r\n";
-    $headers .= "From: mail@cybertraff.com\r\n";
+    $headers .= "From: mail@instatraff.info\r\n";
     $result = mail($to, $subject, $message, $headers);
 
     if ($result){ 
